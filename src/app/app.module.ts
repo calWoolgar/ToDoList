@@ -7,9 +7,11 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms'
 
 @NgModule({
+  // New components should be added here. When using CLI it will do this for us.
   declarations: [
     AppComponent
   ],
+  // Adds different modules here.
   imports: [
     BrowserModule,
     AppRoutingModule,
