@@ -9,31 +9,13 @@
         3 Tasks Left:
       </div>
       <div class="tasklist">
-        <div class="task">
+        <div class="task" v-for="task in tasks" v-bind:key="task.id">
           <label>
-            <input type="checkbox" value="test2" name="test" />
+            <input type="checkbox" :value="task.id" name="tasks" />
             <span class="checkbox"></span>
           </label>
           <div class="name">
-            <p>Finish the todolist!</p>
-          </div>
-        </div>
-        <div class="task">
-          <label>
-            <input type="checkbox" value="test3" name="test" />
-            <span class="checkbox"></span>
-          </label>
-          <div class="name">
-            <p>Do the meeting.</p>
-          </div>
-        </div>
-        <div class="task">
-          <label>
-            <input type="checkbox" value="test4" name="test" />
-            <span class="checkbox"></span>
-          </label>
-          <div class="name">
-            <p>Check emails.</p>
+            <p>{{task.name}}</p>
           </div>
         </div>
       </div>
@@ -49,11 +31,50 @@
 
 <script>
 export default {
+  data() {
+    return {
+      "tasks": []
+    }
+  },
   // TODO:
   // 1. Get todolist on load.
   // 2. Set todo as completed on checkmark.
   // 3. Wire up add task button.
   // 4. Wire up to remove task
+  // 5. On task click should be able to edit task
+  mounted() {
+    this.getTasks();
+  },
+  methods: {
+    getTasks() {
+      this.tasks = [
+          {
+          "id": 1,
+          "name": "Finish the todolist!",
+          "isCompleted": false
+        },
+        {
+          "id": 2,
+          "name": "Do the meeting.",
+          "isCompleted": false
+        },
+        {
+          "id": 3,
+          "name": "Check emails.",
+          "isCompleted": false
+        }
+      ]
+    },
+    addTask() {
+
+    },
+    deleteTask() {
+
+    },
+    updateTask() {
+
+    }
+  }
 }
 </script>
 
