@@ -1,69 +1,69 @@
-# MyTodoList
+# TodoListApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
+## Build Setup
 
-## Development server
+```bash
+# install dependencies
+$ npm install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-Add the `--open` or `-o` option to automatically open the browser. 
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-## Code scaffolding
+# build for production and launch server
+$ npm run build
+$ npm run start
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# generate static project
+$ npm run generate
+```
 
-## Build
+For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Special Directories
 
-## Running unit tests
+You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### `assets`
 
-## Running end-to-end tests
+The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
 
-## Why Use Angular?
+### `components`
 
-- Create dynamic frontend apps and UIs
-- Full featured framework (router, http, etc)
-- Intergrated TypeScript (optional)
-- RxJS - efficient, async programming
-- Test-friendly
-- Popular in enterpriser business
+The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 
-## Understanding Angular 
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
 
-### Components
+### `layouts`
 
-- Components are pieces of the UI including the template, logic and styling
-- They are reusable and can be embedded into the template as an XML-like tag.
-- Create component using `ng generate component <component-name>`
-- - This command creates the following:
-- - A component file `<component-name>.component.ts`
-- - A template file `<component-name>.component.html`
-- - A CSS file `<component-name>.component.css`
-- - A testing spec file `<component-name>.component.spec.ts`
+Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 
-### Services
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
 
-- Angular distinguishes components from services to increase modularity and reusability
-- By seperating a component's view-related functionality from other kinds of processing, you can make your component classes lean and efficient.
-- A component can delegate certain tasks to services, such as fetching data from the server, validating user input, or logging directly to the console.
 
-### CLI
+### `pages`
 
-- Standard tooling for Angular dev.
-- Command line interface for creating apps
-- Dev server and easy production build
-- Commands to generate components, services, etc
+This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
 
-### Templates
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
 
-### Directives
+### `plugins`
 
-### Dependency Injection
+The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
 
-## Further help
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### `static`
+
+This directory contains your static files. Each file inside this directory is mapped to `/`.
+
+Example: `/static/robots.txt` is mapped as `/robots.txt`.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+
+### `store`
+
+This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
