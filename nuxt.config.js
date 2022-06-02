@@ -22,6 +22,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/services/index.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -40,7 +41,11 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios'
   ],
-
+  
+  serverMiddleware: [
+    // Will register file from project server-middleware directory to handle /server-middleware/* requires
+    { path: '/api', handler: '~/api/index.js' },
+  ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 

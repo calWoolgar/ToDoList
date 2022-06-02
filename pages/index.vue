@@ -42,28 +42,12 @@ export default {
   // 3. Wire up add task button.
   // 4. Wire up to remove task
   // 5. On task click should be able to edit task
-  mounted() {
-    this.getTasks();
+  async mounted() {
+    await this.getTasks();
   },
   methods: {
-    getTasks() {
-      this.tasks = [
-          {
-          "id": 1,
-          "name": "Finish the todolist!",
-          "isCompleted": false
-        },
-        {
-          "id": 2,
-          "name": "Do the meeting.",
-          "isCompleted": false
-        },
-        {
-          "id": 3,
-          "name": "Check emails.",
-          "isCompleted": false
-        }
-      ]
+    async getTasks() {
+      this.tasks = await this.$getTasks();
     },
     addTask() {
 
